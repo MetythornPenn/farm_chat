@@ -5,7 +5,7 @@ load_dotenv()
 
 
 class Settings:
-    PROJECT_NAME: str = "Simple Twitter"
+    PROJECT_NAME: str = "Farm Chat"
     PROJECT_VERSION: str = "1.0.0"
     USE_SQLITE_DB: str = os.getenv("USE_SQLITE_DB")
     POSTGRES_USER: str = os.getenv("POSTGRES_USER")
