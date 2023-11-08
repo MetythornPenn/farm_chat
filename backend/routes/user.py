@@ -13,7 +13,7 @@ router = APIRouter(prefix="/users", tags=["Users"])
 
 @router.get("/")
 def getAllUser(db: Session = Depends(get_db)):
-    return UserService.get_allUser(db=db)
+    return UserService.get_all_users(db=db)
 
 
 @router.post("/")

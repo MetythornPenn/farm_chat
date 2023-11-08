@@ -7,15 +7,11 @@ services:
     env_file:
       - ./.env
 
-  postgres:
-    image: postgres
-    environment:
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=bill
-      
-    volumes:
-      - postgres-db:/var/lib/postgresql/data
+  # postgres:
+  #   image: postgres
+  #   volumes:
+  #     - postgres-db:/var/lib/postgresql/data
 
 
-volumes:
-  postgres-db:
+# volumes:
+#   postgres-db:

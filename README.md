@@ -34,6 +34,7 @@ Once you have installed the above and have cloned the repository, you can follow
 3. Activate env: `venv\Script\activate`     # for window(CMD)
 4. Go to backend dir: `cd backend`
 5. Install libraries: `pip install -r requirements.txt`
+6. Import Dummy Data to DB: `python seed.py`
 6. Start server: `python main.py`
 
 

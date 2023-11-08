@@ -121,6 +121,24 @@ class ProductService:
         return response
     
     @staticmethod
+    def create_product(request: ProductSchema, db: Session):
+        new_product = ProductModel(
+            name=request.name,
+            image=request.image,
+            category=request.category,
+            description=request.description,
+            price=request.price,
+            countInStock=request.countInStock,
+            rating=request.rating,
+        )
+
+        db.add(new_product)
+        db.commit()
+        db.refresh(new_product)
+
+        return new_product  
+    
+    @staticmethod
     def update_product(productid: int, request: ProductSchema, db: Session):
         product_id = db.query(ProductModel).filter(ProductModel.id == productid).first()
 
