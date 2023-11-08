@@ -4,8 +4,7 @@
 
 # **Interactive API documentation**
 
-
-![img_3.png](docs/static/ApiEndPoint.png)
+![img_3.png](backend/utils/docs/api_1.png)
 
 
 ### Project Overview

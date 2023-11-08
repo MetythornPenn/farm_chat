@@ -4,8 +4,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from db.database import engine
 from db.database import Base
-from routes import user
-from routes import auth
+from routes import(
+    user, 
+    auth,
+    product,
+) 
+
 
 
 app = FastAPI()
@@ -23,14 +27,14 @@ app.add_middleware(
 
 Base.metadata.create_all(bind=engine)
 
-@app.get("/")
+@app.get("/", tags=["Home"])
 def home():
     return "Server is running!!!"
 
 
 app.include_router(user.router, prefix="/api")
 app.include_router(auth.router, prefix="/api")
-
+app.include_router(product.router, prefix="/api")
 
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)

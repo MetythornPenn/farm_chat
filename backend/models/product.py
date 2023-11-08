@@ -5,7 +5,7 @@ from sqlalchemy.sql.schema import ForeignKey
 from datetime import datetime
 
 from db.database import Base
-from backend.models.review import ReviewModel
+from models.review import ReviewModel
 
 
 
